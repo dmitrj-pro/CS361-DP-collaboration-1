@@ -1,1 +1,6 @@
 E:\Учеба\Паттерны\Лаба 2\Shop\Shop\bin\Debug\Shop.exe.config
+E:\Учеба\Паттерны\Лаба 2\Shop\Shop\bin\Debug\Shop.exe
+E:\Учеба\Паттерны\Лаба 2\Shop\Shop\bin\Debug\Shop.pdb
+E:\Учеба\Паттерны\Лаба 2\Shop\Shop\obj\Debug\Shop.csprojResolveAssemblyReference.cache
+E:\Учеба\Паттерны\Лаба 2\Shop\Shop\obj\Debug\Shop.exe
+E:\Учеба\Паттерны\Лаба 2\Shop\Shop\obj\Debug\Shop.pdb

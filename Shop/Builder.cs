@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Shop
 {
-    class Program
+    interface Builder
     {
-        static void Main(string[] args)
-        {
+        void execute_command(string comm);
 
-        }
+        void execute_file(string filename);
+
+        void init();
     }
 }
