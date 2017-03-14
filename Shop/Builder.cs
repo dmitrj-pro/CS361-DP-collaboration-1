@@ -8,6 +8,7 @@ namespace Shop
 {
     interface Builder
     {
+
         void execute_command(string comm);
 
         void execute_file(string filename);
