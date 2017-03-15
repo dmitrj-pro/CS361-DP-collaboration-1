@@ -51,7 +51,6 @@
     <Compile Include="Kassa\USER\IUser.cs" />
     <Compile Include="Kassa\USER\IUserS.cs" />
     <Compile Include="Kassa\IBuilder.cs" />
-    <Compile Include="Kassa\IParser.cs" />
     <Compile Include="Kassa\USER\UsersBD.cs" />
     <Compile Include="Kassa\Shop\IShop.cs" />
     <Compile Include="Kassa\Shop\Shop.cs" />

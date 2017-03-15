@@ -6,7 +6,7 @@ namespace Shop
 	{
 		void init (string filename);
 
-		void commandByName(string name);
+		int commandByName(string name);
 	}
 }
 
