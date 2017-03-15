@@ -1,0 +1,8 @@
+/home/diman-pro/Yandex.Disk/codes/Паттерны/CS361-DP-collaboration-1/Shop/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttribute.cs
+/home/diman-pro/Yandex.Disk/codes/Паттерны/CS361-DP-collaboration-1/Shop/obj/Debug/Shop.exe
+/home/diman-pro/Yandex.Disk/codes/Паттерны/CS361-DP-collaboration-1/Shop/bin/Debug/Shop.exe.config
+/home/diman-pro/Yandex.Disk/codes/Паттерны/CS361-DP-collaboration-1/Shop/bin/Debug/Shop.exe
+/home/diman-pro/Yandex.Disk/codes/Паттерны/CS361-DP-collaboration-1/Shop/bin/Debug/Shop.exe.mdb
+/home/diman-pro/Yandex.Disk/codes/Паттерны/CS361-DP-collaboration-1/Shop/bin/Debug/Shop.pdb
+/home/diman-pro/Yandex.Disk/codes/Паттерны/CS361-DP-collaboration-1/Shop/obj/Debug/Shop.exe.mdb
+/home/diman-pro/Yandex.Disk/codes/Паттерны/CS361-DP-collaboration-1/Shop/obj/Debug/Shop.pdb

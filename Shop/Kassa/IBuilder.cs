@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shop
 {
-    interface Builder
+    interface IBuilder
     {
 
         void execute_command(string comm);

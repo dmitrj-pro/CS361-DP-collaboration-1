@@ -10,7 +10,8 @@ namespace Shop
     {
         static void Main(string[] args)
         {
-
+			Console.WriteLine ("ss");
+			Console.ReadLine ();
         }
     }
 }

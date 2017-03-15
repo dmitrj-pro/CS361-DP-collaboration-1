@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -43,10 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builder.cs" />
-    <Compile Include="Kassa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Kassa\Kassa.cs" />
+    <Compile Include="Kassa\easyParser.cs" />
+    <Compile Include="Kassa\USER\kaufen.cs" />
+    <Compile Include="Kassa\USER\IUser.cs" />
+    <Compile Include="Kassa\USER\IUserS.cs" />
+    <Compile Include="Kassa\IBuilder.cs" />
+    <Compile Include="Kassa\IParser.cs" />
+    <Compile Include="Kassa\USER\UsersBD.cs" />
+    <Compile Include="Kassa\Shop\IShop.cs" />
+    <Compile Include="Kassa\Shop\Shop.cs" />
+    <Compile Include="Kassa\Shop\Goods\IGoods.cs" />
+    <Compile Include="Kassa\Shop\Goods\Goods.cs" />
+    <Compile Include="Kassa\Shop\Card\ICard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -59,4 +70,11 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="Kassa\" />
+    <Folder Include="Kassa\USER\" />
+    <Folder Include="Kassa\Shop\" />
+    <Folder Include="Kassa\Shop\Goods\" />
+    <Folder Include="Kassa\Shop\Card\" />
+  </ItemGroup>
 </Project>

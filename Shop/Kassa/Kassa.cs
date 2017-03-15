@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shop
 {
-    class Kassa: Builder
+    class Kassa: IBuilder
     {
         public void execute_command(string comm) { }
 
