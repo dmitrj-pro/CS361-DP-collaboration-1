@@ -10,12 +10,8 @@ namespace Shop
     {
         static void Main(string[] args)
         {
-			Dictionary<string,int> r = easyParser.Parse ("ParserTest.txt");
-			foreach (var x in r) {
-				Console.WriteLine (x.Key + " " + x.Value);
-			}
-			Console.WriteLine (r.ToString ());
-			Console.WriteLine ("ss");
+			IBuilder b = new Kassa ();
+			b.execute_file ("test_file.txt");
 			Console.ReadLine ();
         }
     }

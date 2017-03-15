@@ -4,9 +4,15 @@ namespace Shop
 {
 	public class kaufen:IUser
 	{
-		public string getName() {return "Test"; }
+		private string _name;
+		private string _mail;
+		public kaufen(string name,string mail){
+			_name=name;
+			_mail = mail;
+		}
+		public string getName() {return _name; }
 
-		public string getMail() {return "Test";}
+		public string getMail() {return _mail;}
 	}
 }
 

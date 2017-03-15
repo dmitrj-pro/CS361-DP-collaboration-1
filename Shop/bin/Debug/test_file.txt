@@ -1,0 +1,3 @@
+login SuperUser diman-pro@myprogram.us
+get_Name
+get_Mail
