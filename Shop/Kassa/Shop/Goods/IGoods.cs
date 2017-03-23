@@ -4,7 +4,7 @@ namespace Shop
 {
 	public interface IGoods
 	{
-		int zena();
+		int cost();
 		string name();
 
 	}

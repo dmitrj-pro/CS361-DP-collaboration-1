@@ -6,7 +6,7 @@ namespace Shop
 	{
 		public void add(string goods){}
 		public void exit(){}
-		public void bay(){}
+		public void buy(){}
 		public void init(IUser u){}
 	}
 }
