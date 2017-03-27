@@ -17,6 +17,8 @@ namespace Shop
 			System.IO.File.WriteAllText (UsersBD.filename, str);
 		}
 		public IUser login(string name,string mail){ 
+			name=name.ToLower();
+			mail = mail.ToLower ();
 			name=name+mail;
 			if (_BD.ContainsKey (name)) {
 				return new kaufen (name.Substring(0,name.Length-mail.Length), mail);
@@ -26,6 +28,8 @@ namespace Shop
 		}
 
 		public IUser registration(string name,string mail){
+			name=name.ToLower();
+			mail = mail.ToLower ();
 			name=name+mail;
 			if (_BD.ContainsKey(name))
 				return null;

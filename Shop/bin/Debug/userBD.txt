@@ -1,3 +1,8 @@
 testTester=Tester
 rrRR=RR
 SuperUserdiman-pro@myprogram.us=diman-pro@myprogram.us
+teetee=tee
+dddddd=ddd
+ssdssd=ssd
+teer=r
+testuser=user

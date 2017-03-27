@@ -44,8 +44,10 @@ namespace Shop
 		public bool add(string goods){
 			if (isLock())
 				return false;
-			if (!_BASE.ContainsKey(goods))
-				throw new Exception ("Goods is not found");
+			if (!_BASE.ContainsKey (goods)) {
+				Console.WriteLine ("Goods is not found");
+				return false;
+			}
 			_list.Add(new Goods(goods,_BASE[goods]));
 			return true;
 		}
@@ -84,7 +86,7 @@ namespace Shop
 		}
 		public void buy(){
 			Cards.Card.add(_u,showSum());
-			_list = null;
+			_list = new System.Collections.Generic.List<IGoods>();
 			Lock (false);
 		}
 		public void init(IUser u){

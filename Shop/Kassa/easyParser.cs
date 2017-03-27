@@ -3,6 +3,10 @@
 namespace Shop
 {
 	public class easyParser	{
+		/// <summary>
+		/// Парсер INI файла формата: "Name=int_Value"
+		/// </summary>
+		/// <param name="filename">Filename.</param>
 		static public System.Collections.Generic.Dictionary<string,int> Parse (string filename){
 			if (System.IO.File.Exists (filename)) {
 				System.Collections.Generic.Dictionary<string,int> _data = new System.Collections.Generic.Dictionary<string, int> ();
@@ -19,6 +23,11 @@ namespace Shop
 				throw new Exception ("System file " + filename + " is not found.");
 			}
 		}
+		/// <summary>
+		/// Парсер INI файла формата "Name=Value"
+		/// </summary>
+		/// <returns>The all string.</returns>
+		/// <param name="filename">Filename.</param>
 		static public System.Collections.Generic.Dictionary<string,string> ParseAllString (string filename){
 			if (System.IO.File.Exists (filename)) {
 				System.Collections.Generic.Dictionary<string,string> _data = new System.Collections.Generic.Dictionary<string, string> ();

@@ -22,7 +22,8 @@ namespace Shop
 				return;
 			string[] parametr = comm.Split (' ');
 			if (!_comm.ContainsKey (parametr [0])) {
-				throw new Exception ("Command '" + parametr [0] + "' is not correct.");
+				Console.WriteLine ("Command '" + parametr [0] + "' is not correct.");
+				return;
 			}
 			int num = _comm [parametr[0]];
 			switch (num) {
@@ -76,7 +77,8 @@ namespace Shop
 				Console.WriteLine (_s.Order ());
 				break;
 			default:
-				throw new Exception ("Command " + comm + " is not found");
+				Console.WriteLine (comm + " is not found\n");
+				return;
 			}
 		}
 
