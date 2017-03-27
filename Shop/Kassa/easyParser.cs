@@ -8,6 +8,8 @@ namespace Shop
 				System.Collections.Generic.Dictionary<string,int> _data = new System.Collections.Generic.Dictionary<string, int> ();
 				string[] data = System.IO.File.ReadAllLines (filename);
 				for (int i = 0; i < data.Length; i++) {
+					if (data [i].Equals (""))
+						continue;
 					string[] p = data [i].Split ('=');
 					int f = int.Parse (p [1]);
 					_data.Add (p[0], f);

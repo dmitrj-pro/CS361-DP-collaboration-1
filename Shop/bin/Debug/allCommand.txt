@@ -2,3 +2,5 @@ login=0
 reg=1
 get_Name=2
 get_Mail=3
+add=4
+check=5

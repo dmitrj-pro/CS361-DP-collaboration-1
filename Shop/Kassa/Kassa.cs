@@ -10,11 +10,12 @@ namespace Shop
     {
 		private Dictionary<string,int> _comm;
 		private UsersBD BD;
-		private IUser u;
+		private IShop _s;
 		static private string filename="allCommand.txt";
 		public Kassa(){
 			_comm = easyParser.Parse (Kassa.filename);
 			BD = new UsersBD ();
+			_s = new Shop ("goods_base.txt");
 		}
         public void execute_command(string comm) {
 			string[] parametr = comm.Split (' ');
@@ -24,16 +25,37 @@ namespace Shop
 			int num = _comm [parametr[0]];
 			switch (num) {
 			case 0:
-				u = BD.login (parametr [1], parametr [2]);
+				{
+					IUser u = BD.login (parametr [1], parametr [2]);
+					_s.init (u);
+				}
 				break;
 			case 1:
-				u = BD.registration (parametr [1], parametr [2]);
+				{
+					IUser u = BD.registration (parametr [1], parametr [2]);
+					_s.init (u);
+				}
 				break;
 			case 2:
-				Console.WriteLine (u.getName ());
+				Console.WriteLine (_s.getUser().getName ());
 				break;
 			case 3:
-				Console.WriteLine (u.getMail ());
+				Console.WriteLine (_s.getUser().getMail ());
+				break;
+			case 4:
+				string goods = "";
+				for (int i = 1; i < parametr.Length; i++) {
+					goods += parametr [i];
+					if (i != parametr.Length - 1)
+						goods += " ";
+				}
+				if (_s.add (goods))
+					Console.WriteLine ("OK");
+				else
+					Console.WriteLine ("FAIL");
+				break;
+			case 5:
+				Console.WriteLine (_s.getCheck ());
 				break;
 			default:
 				throw new Exception ("Command " + comm + " is not found");

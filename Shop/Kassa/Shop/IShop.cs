@@ -4,10 +4,14 @@ namespace Shop
 {
 	public interface IShop
 	{
-		void add(string goods);
+		bool add(string goods);
 		void exit();
 		void buy();
 		void init(IUser u);
+		int showSum();
+		int showSumWithKard();
+		string getCheck();
+		IUser getUser();
 	}
 }
 

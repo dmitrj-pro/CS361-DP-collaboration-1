@@ -1,3 +1,7 @@
 login SuperUser diman-pro@myprogram.us
 get_Name
 get_Mail
+add Logitech K380
+add Google Chromecast
+add Google Chromecast
+check
