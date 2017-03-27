@@ -69,6 +69,12 @@ namespace Shop
 			case 8:
 				_s.Lock ();
 				break;
+			case 9:
+				Console.WriteLine (_s.List ());
+				break;
+			case 10:
+				Console.WriteLine (_s.Order ());
+				break;
 			default:
 				throw new Exception ("Command " + comm + " is not found");
 			}

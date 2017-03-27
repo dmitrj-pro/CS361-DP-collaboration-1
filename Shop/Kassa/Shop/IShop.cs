@@ -15,6 +15,8 @@ namespace Shop
 		bool isLock();
 		bool Lock();
 		bool Lock(bool t);
+		String List();
+		string Order();
 	}
 }
 

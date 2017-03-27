@@ -7,3 +7,5 @@ check=5
 exit=6
 buy=7
 commit=8
+list=9
+order=10

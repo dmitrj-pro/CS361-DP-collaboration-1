@@ -20,6 +20,20 @@ namespace Shop
 		}
 		private IUser _u;
 		static private System.Collections.Generic.Dictionary<string,int> _BASE;
+		public string List(){
+			string res="";
+			foreach (var x in _BASE) {
+				res += x.Key + "\t\t\t" + x.Value.ToString () + "\n";
+			}
+			return res;
+		}
+		public string Order(){
+			string res="";
+			foreach (var x in _list) {
+				res += x.name() + "\t\t\t" + x.cost().ToString () + "\n";
+			}
+			return res;
+		}
 		public Shop(string fileBase){
 			if (_BASE == null) {
 				_BASE = easyParser.Parse(fileBase);
