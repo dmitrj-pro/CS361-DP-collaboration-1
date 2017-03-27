@@ -5,6 +5,19 @@ namespace Shop
 	public class Shop:IShop
 	{
 		private System.Collections.Generic.List<IGoods> _list;
+
+		private bool _lock=false;
+		public bool isLock(){
+			return _lock;
+		}
+		public bool Lock(){
+			_lock=!_lock;
+			return isLock ();
+		}
+		public bool Lock(bool t){
+			_lock=t;
+			return isLock ();
+		}
 		private IUser _u;
 		static private System.Collections.Generic.Dictionary<string,int> _BASE;
 		public Shop(string fileBase){
@@ -15,6 +28,8 @@ namespace Shop
 		}
 			
 		public bool add(string goods){
+			if (isLock())
+				return false;
 			if (!_BASE.ContainsKey(goods))
 				throw new Exception ("Goods is not found");
 			_list.Add(new Goods(goods,_BASE[goods]));
@@ -51,10 +66,12 @@ namespace Shop
 		public void exit(){
 			_u=null;
 			_list = null;
+			Lock (false);
 		}
 		public void buy(){
 			Cards.Card.add(_u,showSum());
 			_list = null;
+			Lock (false);
 		}
 		public void init(IUser u){
 			_u=u;

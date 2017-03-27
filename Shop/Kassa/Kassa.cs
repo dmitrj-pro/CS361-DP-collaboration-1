@@ -66,6 +66,9 @@ namespace Shop
 				Console.WriteLine (_s.getCheck ());
 				_s.buy ();
 				break;
+			case 8:
+				_s.Lock ();
+				break;
 			default:
 				throw new Exception ("Command " + comm + " is not found");
 			}

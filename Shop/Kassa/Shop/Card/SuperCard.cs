@@ -73,7 +73,7 @@ namespace Shop
 				sum += _base [hash].y;
 			}
 			ICard c=ParseCard(id_card);
-			if (c.isNext(sum))
+			while(c.isNext(sum))
 				c=ParseCard(++id_card);
 			if (_base.ContainsKey (hash)){
 				_base[hash].y=sum;

@@ -12,6 +12,9 @@ namespace Shop
 		double showSumWithKard();
 		string getCheck();
 		IUser getUser();
+		bool isLock();
+		bool Lock();
+		bool Lock(bool t);
 	}
 }
 

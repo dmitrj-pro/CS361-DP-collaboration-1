@@ -4,6 +4,8 @@ get_Mail
 add Logitech K380
 add Google Chromecast
 add Google Chromecast
+commit
+add Google Chromecast
 buy
 
 exit
