@@ -9,7 +9,7 @@ namespace Shop
 		void buy();
 		void init(IUser u);
 		int showSum();
-		int showSumWithKard();
+		double showSumWithKard();
 		string getCheck();
 		IUser getUser();
 	}

@@ -57,6 +57,11 @@
     <Compile Include="Kassa\Shop\Goods\IGoods.cs" />
     <Compile Include="Kassa\Shop\Goods\Goods.cs" />
     <Compile Include="Kassa\Shop\Card\ICard.cs" />
+    <Compile Include="Kassa\Shop\Card\SuperCard.cs" />
+    <Compile Include="Kassa\Shop\Card\LampCard.cs" />
+    <Compile Include="Kassa\Shop\Card\TransCard.cs" />
+    <Compile Include="Kassa\Shop\Card\IntegralCard.cs" />
+    <Compile Include="Kassa\Shop\Card\NullCard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -27,9 +27,9 @@ namespace Shop
 			}
 			return res;
 		}
-		public int showSumWithKard(){
-			//ToDo
-			return showSum();
+		public double showSumWithKard(){
+			ICard c=Cards.Card.findCard(_u.getName(),_u.getMail());
+			return c.reCount(showSum());
 		}
 		public string getCheck(){
 			string res="";
@@ -39,12 +39,23 @@ namespace Shop
 				res += x.name () + "\t\t\t" + x.cost ().ToString ()+"\n";
 			}
 			res += "-------------------------------------\n";
-			res += "Sum = " + sum.ToString ();
+			res += "Sum: " + sum.ToString ()+"\n";
+			ICard c = Cards.Card.findCard (_u.getName (), _u.getMail ());
+			res += "Card: " + c.name () + "\n";
+			res += "Sum with Card: " + showSumWithKard () + "\n";
+			if (Cards.Card.isNewCard(_u,showSum()))
+				res += "New Card!\n";
 			return res;
 		}
 					
-		public void exit(){}
-		public void buy(){}
+		public void exit(){
+			_u=null;
+			_list = null;
+		}
+		public void buy(){
+			Cards.Card.add(_u,showSum());
+			_list = null;
+		}
 		public void init(IUser u){
 			_u=u;
 		}

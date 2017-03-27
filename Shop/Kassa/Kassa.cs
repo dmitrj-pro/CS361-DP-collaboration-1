@@ -18,6 +18,8 @@ namespace Shop
 			_s = new Shop ("goods_base.txt");
 		}
         public void execute_command(string comm) {
+			if (comm.Equals (""))
+				return;
 			string[] parametr = comm.Split (' ');
 			if (!_comm.ContainsKey (parametr [0])) {
 				throw new Exception ("Command '" + parametr [0] + "' is not correct.");
@@ -56,6 +58,13 @@ namespace Shop
 				break;
 			case 5:
 				Console.WriteLine (_s.getCheck ());
+				break;
+			case 6:
+				_s.exit ();
+				break;
+			case 7:
+				Console.WriteLine (_s.getCheck ());
+				_s.buy ();
 				break;
 			default:
 				throw new Exception ("Command " + comm + " is not found");
